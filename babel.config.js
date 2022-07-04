@@ -1,4 +1,11 @@
-module.exports = {
-  babelrcRoots: ['.', 'packages/*'],
-  presets: ['babel-preset-gatsby'],
+module.exports = function(api) {
+  api.cache(true);
+
+  const presets = ['next/babel'];
+  const plugins = [['styled-components']];
+
+  return {
+    presets,
+    plugins,
+  };
 };
